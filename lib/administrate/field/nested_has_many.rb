@@ -64,7 +64,7 @@ module Administrate
       end
 
       def association_name
-        associated_class_name.underscore.pluralize
+        options.fetch(:association_name, associated_class_name.underscore.pluralize)
       end
 
       def associated_form
